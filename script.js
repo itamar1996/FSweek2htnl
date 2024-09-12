@@ -197,13 +197,35 @@ document.querySelector("#btn-ctg").addEventListener("click",()=>{
 })
 
 
-document.querySelector("green-btn-frm").addEventListener("click",()=>{
+document.querySelector(".green-btn-frm").addEventListener("click",()=>{
+  console.log("fhs");
+  
   let name = document.querySelector(".nameedit").value;
   let rank = document.querySelector(".rankedit").value;
   let position = document.querySelector(".positionedit").value;
   let platoon = document.querySelector(".platoonedit").value;
   let missionTime = document.querySelector(".missionTimeedit").value;
   let status = document.querySelector("selectedit").value;
-
-})
+  let arrsoldiers = JSON.parse( localStorage.getItem("soldierslist"));
+  const index = arrsoldiers.findIndex(obj => obj.fullName === name); 
+  let newSoldier = {
+    fullName: name,
+    rank: rank,
+    position: position,
+    platoon: platoon,
+    status: status,
+    missionTime: parseFloat(missionTime)
+  }; 
+  arrsoldiers[index] = newSoldier
+  localStorage.setItem("soldierslist",JSON.stringify( arrsoldiers));
+  const heder = document.querySelector(".heder");
+  heder.textContent = "BATTALION FORCE MANGEMENT";
+  const contentadd =document.querySelector(".content-add")
+  contentadd.style.display = "flex"
+  const contenttable = document.querySelector(".content-table");
+  contenttable.style.display = "flex";
+  const editfrm = document.querySelector(".edit-frm");
+  editfrm.style.display = "none"
+  loadtable(arrsoldiers);
+});
 
