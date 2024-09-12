@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="heder">
+        <h1 >BATTALION FORCE MANGEMENT </h1>
+    </div>
+    <section class="content-add">
+        <div class="add-form">
+            <input type="text" class="name npt-frm"  placeholder="full name">
+            <input type="text" class="rank npt-frm" placeholder="Rank">
+            <input type="text" class="position npt-frm" placeholder="position">
+            <input type="text" class="platoon npt-frm" placeholder="platoon">
+            <input type="number" class="missionTime npt-frm" placeholder="miision time (second)">
+            <select name="status npt-frm">
+                <option value="Active npt-frm">Active</option>
+                <option value="Retired npt-frm">Retired</option>
+                <option value="Reserve npt-frm">Reserve</option>
+            </select>
+            <button class="add-slg npt-frm green-btn-frm" id="btn-add-slg">add person</button>
+        </div>
+    </section>
+
+    <section class="content-table">
+        <div class="heder">
+            <h1>FORCES OVERVIEW</h1>
+        </div>
+        <div class="categories">
+            <div class="category">
+                <div id="btn-ctg">
+                    Full name
+                </div>
+            </div>
+            <div class="category">
+                <p>RANK</p>
+            </div>
+            <div class="category">
+                <p>position</p>
+            </div>
+            <div class="category">
+                <p>platoon</p>
+            </div>
+            <div class="category">
+                <p>status</p>
+            </div>
+           
+            <div class="category" id="actions">
+                <p>actions</p>
+            </div>
+        </div>
+        <div class="table-person">
+            <!-- <div class="categories person">
+                <div class="category person">
+                    <p>itamar</p>
+                </div>
+                <div class="category person">
+                    <p>30</p>
+                </div>
+                <div class="category person">
+                    <p>190</p>
+                </div>
+                <div class="category person">
+                    <p>active</p>
+                </div>
+                <div class="category person">
+                    <p>active</p>
+                </div>
+                <div class="category person" id="actions">
+                    <button class="actions-btn">Remove</button>
+                    <button class="actions-btn">mission completed</button>
+                    <button class="actions-btn">edit</button>
+                </div>
+                </div>  -->
+            
+        </div>
+    
+    </section>
+    <div class="heder-edit"><h1 >EDIT PERSONNEL </h1></div>
+    <section class="content-add edit-frm">
+        <div class="add-form">
+            <input type="text" class="nameedit npt-frm" placeholder="full name">
+            <input type="text" class="rankedit npt-frm " placeholder="Rank">
+            <input type="text" class="positionedit npt-frm" placeholder="position">
+            <input type="text" class="platoonedit npt-frm" placeholder="platoon">
+            <input type="number" class="missionTimeedit npt-frm" placeholder="miision time (second)">
+            <select name="statusedit npt-frm">
+                <option value="Active npt-frm">Active</option>
+                <option value="Retired npt-frm">Retired</option>
+                <option value="Reserve npt-frm">Reserve</option>
+            </select>
+            <button class="add-slg npt-frm green-btn-frm" id="">SAVE CVANCVES</button>
+            <button class="add-slg npt-frm red-btn-frm" id="">CANCEL</button>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
